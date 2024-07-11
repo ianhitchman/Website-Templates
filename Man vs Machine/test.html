@@ -1,0 +1,429 @@
+<html>
+<head>
+  <style>
+    @charset "UTF-8";
+
+    @font-face {
+      font-family: "man-vs-machine";  
+              src:url("resources/man-vs-machine.eot");
+              src:url("resources/man-vs-machine.eot?#iefix") format("embedded-opentype"),
+                  url("resources/man-vs-machine.woff") format("woff"),
+                  url("resources/man-vs-machine.ttf") format("truetype"),
+                  url("resources/man-vs-machine.svg#man-vs-machine") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'ocra';
+        src: url('resources/ocra-mac-webfont.woff2') format('woff2'),
+             url('resources/ocra-mac-webfont.woff') format('woff'),
+             url('resources/ocra-mac-webfont.ttf') format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+    body {
+      background: #363F7C url(resources/background.png) 0 0 no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      padding: 0;
+      margin: 0;
+      font-family: 'ocra';
+      font-size: 28px;
+      letter-spacing: -0.15em;
+    }
+    h2 {
+      margin: 0 0 1em 0;
+      font-size: 170%;
+      font-weight: normal;
+      padding: 0;
+      line-height: 1em;
+      transform: rotateZ(-1deg);
+    }
+    .main_container {
+      padding: 0 2vw;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    #header_container {
+      width: 100%;
+      height: 34vw;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      padding: 2vw;
+    }
+    #top_logo_container {
+      position: absolute;
+      z-index:2;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 2vw;
+      box-sizing: border-box;
+      height: 10vw;
+      background: url(resources/header_grad.png) repeat-x 0 0;
+      background-size: 100% 100%;
+    }
+    #top_logo {
+      max-width: 600px;
+      width: 80%;
+      height: auto;
+      display: block;
+      box-sizing: border-box;
+      transition: all 0.5s ease;
+    }
+    #hamburger {
+      position: absolute;
+      top: 5vw;
+      right: 2vw;
+      width: 10vw;
+      height: auto;
+      display: block;
+      max-width: 50px;
+    }
+    @media only screen and (max-width: 1400px) {
+      #top_logo {
+        width: 40%;
+      }    
+    }
+    @media screen and (orientation: portrait) {
+      #top_logo {
+        width: 80% !important;
+      }
+    }
+    #header_container video {
+      width: 102%;
+      height: auto;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      opacity: 1;
+      cursor: pointer;  
+    }
+    #header_container #play_button {
+      width: 10vw;
+      height: auto;
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      opacity: 0;
+      z-index: 1;    
+      cursor: pointer;  
+      transition: all 0.5s ease;
+    }
+    #header_container:hover #play_button {
+      opacity: 0.2;
+    }
+    #play_button:hover {
+      opacity: 0.5 !important;
+    }
+    @media screen and (orientation: portrait) {
+      #header_container {
+        height: 80vw;
+      }
+      #header_container video {
+        width: 240%;
+      }
+      #header_container #play_button {
+        opacity: 0.2;
+        width: 20vw;
+        bottom: auto;
+        top: 50%;
+        transform: translate3d(-50%, -10%, 0);
+      }
+    }
+    #home_section1 {
+      display: table;
+      width: 100%;
+      border-spacing: 4vw;
+    }
+    #home_content {
+      display: table-cell;
+      vertical-align:top;
+      text-align: center;
+      color: #fff;
+      width: 50%;
+      line-height: 1em;
+    }
+    #home_content p {
+      margin: 0 0 1.5em 0;
+    }
+    @media only screen and (max-width: 1200px) {
+      #home_section1 {
+        display: block;
+      }
+      #home_content, #home_enquiry {
+        display: block;
+        width: 100%;
+        font-size: 80%;
+      }
+      #home_content {
+        padding: 8vw 0 0 0;
+      }
+      #home_enquiry {
+        padding: 0 0 4vw 0;
+      }
+      #home_content p {
+        margin: 0 0 1em 0;
+      }
+    }
+    #home_content p strong {
+      font-size: 120%;
+      display: block;
+      margin-top: 1em;
+      transform: rotateZ(1deg);
+    }
+    #home_enquiry {
+      vertical-align:top;
+      width: 50%;
+      text-align: center;
+      display: table-cell;
+    }
+    #home_enquiry img {
+      width: 100%;
+      display: block;
+      margin: 0 auto 1vw auto;
+      max-width: 644px;
+    }
+    input[type=text] {
+      display: block;
+      box-sizing: border-box;
+      background: #fff;
+      border: 0;
+      padding: 0.5vw;
+      font-size: 80%;
+      color: #000;
+      font-family: inherit;
+      letter-spacing: -0.15em;
+      line-height: inherit;
+    }
+    input[type=submit] {
+      display: block;
+      box-sizing: border-box;
+      background: #EC1E25;
+      border: 0;
+      padding: 0.5vw;
+      font-size: 80%;
+      color: #fff;
+      font-family: inherit;
+      letter-spacing: -0.15em;    
+      line-height: inherit;  
+      cursor: pointer;
+    }
+    #home_enquiry input {
+      width: 60%;
+      margin: 1vw auto;
+      min-width: 300px;
+    }
+    .circles_container {
+      width: 100%;
+      box-sizing: border-box;
+      background: #EC1E25;
+      display: table;
+    }
+    .circle_container {
+      display: table-cell;
+      vertical-align: bottom;
+      width: 33.3333%;
+      text-align: center;
+      padding: 2vw 1vw;
+      color: #fff;
+      font-size: 80%;
+      line-height: 1em;
+    }
+    @media only screen and (max-width: 700px) {
+      .circles_container {
+        display: block;
+        padding: 4vw 0;
+      }
+      .circle_container {
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+      }
+    }
+    .circle_container strong {
+      font-weight: normal;
+      display: block;
+      font-size: 150%;
+      line-height: 1em;
+      margin-bottom: 0.5em;
+    }
+    .circle {
+      display: block;
+      margin: 2vw auto;
+      width: 15vw;
+      height: 15vw;
+      box-sizing: border-box;
+      background: #000;
+      border: 0.6vw solid #fff;
+      border-radius: 50%;
+      position: relative;
+      cursor: default;
+    }
+    .circle span {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate3D(-50%,-50%,0);
+      font-size: 13.7vw;
+      color: #fff;
+      font-family: "man-vs-machine";
+    }
+    .circle_container:nth-child(1) .circle span {
+      margin-left: -1vw;
+      margin-top: 0.3vw;
+    }
+    .circle_container:nth-child(3) .circle span {
+      margin-left: 0.41vw;
+      margin-top: -1.3vw;
+      font-size: 12vw;      
+    }
+    @media only screen and (max-width: 700px) {
+      .circle {
+        width: 50vw;
+        height: 50vw;
+        border: 2vw solid #fff;
+        margin: 4vw auto 8vw auto;;
+      }
+      .circle span {
+        font-size: 45vw; 
+      }
+      .circle_container:nth-child(3) .circle span {
+        font-size: 40vw;   
+        margin-left: 1vw;
+        margin-top: -4.3vw;         
+      }
+    }
+    .photos_bar {
+      display: table;
+      width: 100%;
+    }
+    .photos_bar img {
+      display: table-cell;
+      width: 33.3333%;
+      height: 15.7vw;
+    }
+    @media only screen and (max-width: 600px) {
+      .photos_bar img {
+        display: none;
+        width: 100%;
+        height: auto;
+      }
+      .photos_bar img:nth-child(1) {
+        display: block;
+      }
+    }
+    #home_section2 {
+      display: table;
+      width: 80%;
+      margin: 0 auto;
+      border-spacing: 2vw;
+    }
+    #home_content_2 {
+      display: table-cell;
+      width: 65%;
+      text-align: center;
+      color: #fff;
+      vertical-align: top;
+      font-size: 70%;
+    }
+    #home_cartoon_pic {
+      display: table-cell;
+      width: 35%;
+      text-align: center;
+      vertical-align: top;
+    }
+    #home_cartoon_pic img {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: -5vw auto 0 auto;
+      min-width: 400px;
+    }
+    @media only screen and (max-width: 1200px) {
+      #home_section2 {
+        display: block;
+      }
+      #home_cartoon_pic {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 4vw 0 4vw 0;
+      }
+      #home_content_2 {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0 4vw 0;
+      }
+      
+      
+    }
+    
+  </style>
+</head>
+<body>
+<div id="header_container">
+  <div id="top_logo_container">
+    <img src="resources/logo.png" alt="Man vs Machine" id="top_logo" />
+    <img src="resources/hamburger.png" alt="Mobile menu" id="hamburger" />
+  </div>
+  <video autoplay="autoplay" muted="muted" loop="loop">
+    <source src="resources/cover.mp4" type="video/mp4" />
+  </video>
+  <img src="resources/play_button.png" alt="Play video" id="play_button" /> 
+</div>
+<div class="main_container">
+  <div id="home_section1">
+    <div id="home_content">
+      <h2>Looking for a wedding / party band?</h2>
+      <p>Heart set on live music for your party or event?</p>      <p>Budget won't stretch to a full live band?</p>      <p>Venue worried about the neighbours?</p>
+      <p><strong>Before you book that DJ,<br />take a look at another option...</strong></p>
+    </div>
+    <form id="home_enquiry" method="post">
+      <img src="resources/quickprice.png" alt="Quick price" />
+      <input type="text" name="name" placeholder="Your name" />
+      <input type="text" name="email" placeholder="Your email address" />
+      <input type="text" name="date" placeholder="Date of event" />
+      <input type="submit" value="Get a price &#9658;" />
+    </form>
+  </div>
+</div>
+<div class="photos_bar">
+  <img src="resources/photo1.jpg" alt="Man vs Machine live photo" />
+  <img src="resources/photo2.jpg" alt="Man vs Machine live photo" />
+  <img src="resources/photo3.jpg" alt="Man vs Machine live photo" />
+</div>
+<div class="circles_container">
+  <div class="circle_container">
+    <strong>Live music</strong>This ain't no karaoke!
+    <div class="circle"><span>&#xe900;</span></div>
+  </div>
+  <div class="circle_container">
+    <strong>Something for everyone</strong>Rock &amp; pop classics
+    <div class="circle"><span>&#xe901;</span></div>
+  </div>
+  <div class="circle_container">
+    <strong>Dance the night away</strong>Full DJ service included
+    <div class="circle"><span>&#xe902;</span></div>
+  </div>
+</div>
+<div class="main_container">
+  <div id="home_section2">
+    <div id="home_cartoon_pic">
+      <img src="resources/cartoon.png" />
+    </div>
+    <div id="home_content_2">
+      <h2>Man vs Machine - the party band duo</h2>
+      <p>Man vs Machine are two humans with electric guitars: Ben Maxwell and Ian Hitchman. While playing for a number of years in wedding / party band 'Sidekick', the pair realised there was a market for a 'band experience' - but in a smaller package. </p>      <p>There are plenty of great duos out there with acoustic guitars, playing the latest chart songs to karaoke backing tracks - but none really close to capturing the energy of a real live band. Until now.</p>      <p>Ian and Ben set about recording their own backing tracks, with this aim in mind. The tracks would be stripped down (no cheeky unnecessary overdubs), and all recorded from scratch. This ensures consistency, and reduces the 'karaoke' vibe.</p>      <p>With the addition of programmed light shows, a Man vs Machine performance is just like watching a full band - only more compact. Just two dudes, and two guitars. </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
