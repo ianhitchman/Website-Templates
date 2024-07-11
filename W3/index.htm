@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W3 Applications</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-links">
+      <a href="#" class="col1" data-page="page1"><span>WEBSITES</span></a>
+      <a href="#" class="col2" data-page="page2"><span>DEV</span></a>
+      <a href="#" class="col3" data-page="page3"><span>APPS</span></a>
+      <a href="#" class="col4" data-page="page4"><span>DESIGN</span></a>
+      <a href="#" class="burger-button">≡</a>
+    </div>
+    <div class="page" data-page="home" id="homepage">
+      <svg
+        viewBox="0 0 500 232"
+        class="w3-logo"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <clipPath id="clip-0">
+            <path
+              d="M 302.597 13.952 C 295.99 7.44 287.431 4.184 276.902 4.184 C 266.663 4.184 258.237 7.508 251.617 14.149 C 245.015 20.802 241.714 29.287 241.714 39.59 L 241.714 131.563 C 241.714 138.624 239.351 144.528 234.63 149.271 C 229.915 154.025 224.052 156.398 217.036 156.398 C 210.026 156.398 204.162 154.025 199.438 149.271 C 194.721 144.528 192.358 138.624 192.358 131.563 L 192.358 39.59 C 192.358 29.287 190.496 21.2 183.278 13.919 C 181.143 11.766 173.853 4.258 160.858 4.258 C 148.092 4.258 139.255 12.977 138.549 13.69 C 131.433 20.867 129.168 29.287 129.168 39.59 L 129.168 131.563 C 129.168 138.624 126.805 144.528 122.087 149.271 C 117.36 154.025 111.502 156.398 104.485 156.398 C 97.474 156.398 91.611 154.025 86.898 149.271 C 82.173 144.528 79.811 138.624 79.811 131.563 L 79.811 39.59 C 79.811 29.287 76.509 20.802 69.906 14.149 C 63.29 7.508 54.861 4.184 44.622 4.184 C 34.093 4.184 25.534 7.44 18.926 13.952 C 12.315 20.468 9.016 29.028 9.016 39.617 L 9.016 131.682 C 9.016 159.114 18.124 181.987 36.323 200.318 C 54.531 218.648 77.246 227.816 104.485 227.816 C 125.374 227.816 144.122 221.637 160.764 209.309 C 177.402 221.637 196.154 227.816 217.036 227.816 C 244.279 227.816 266.995 218.648 285.201 200.318 C 303.401 181.987 312.507 159.114 312.507 131.682 L 312.507 39.617 C 312.507 29.028 309.213 20.468 302.597 13.952"
+              style="
+                fill-opacity: 1;
+                fill-rule: nonzero;
+                paint-order: fill;
+                fill: rgb(64, 45, 233);
+              "
+              id="path-1"
+              class="mask-w"
+            ></path>
+          </clipPath>
+          <clipPath id="clip-1">
+            <path
+              d="M 335.548 11.484 C 330.816 16.355 328.448 22.66 328.448 30.417 C 328.448 37.965 330.868 44.174 335.689 49.051 C 340.527 53.916 346.695 56.347 354.184 56.347 L 421.028 56.347 C 426.16 56.347 430.452 58.088 433.9 61.569 C 437.353 65.041 439.079 69.364 439.079 74.532 C 439.079 79.697 437.353 84.018 433.9 87.499 C 430.452 90.979 426.16 92.717 421.028 92.717 L 354.184 92.717 C 346.693 92.717 341.477 93.457 334.763 100.172 C 330.837 104.098 328.573 110.37 328.573 115.897 C 328.573 120.568 329.903 126.76 335.031 131.889 C 340.43 137.288 346.86 139.285 354.184 139.285 L 421.028 139.285 C 426.16 139.285 430.452 141.023 433.9 144.499 C 437.353 147.98 439.079 152.303 439.079 157.468 C 439.079 162.636 437.353 166.959 433.9 170.432 C 430.452 173.912 426.16 175.651 421.028 175.651 L 354.184 175.651 C 346.695 175.651 340.527 178.087 335.689 182.95 C 330.868 187.827 328.448 194.037 328.448 201.584 C 328.448 209.342 330.816 215.649 335.548 220.517 C 340.284 225.387 346.504 227.816 354.202 227.816 L 421.114 227.816 C 441.052 227.816 457.676 221.109 470.999 207.698 C 484.321 194.283 490.984 177.542 490.984 157.468 C 490.984 142.075 486.494 128.261 477.534 116.002 C 486.494 103.736 490.984 89.923 490.984 74.532 C 490.984 54.459 484.321 37.719 470.999 24.306 C 457.676 10.891 441.052 4.184 421.114 4.184 L 354.202 4.184 C 346.504 4.184 340.284 6.614 335.548 11.484"
+              style="
+                fill-opacity: 1;
+                fill-rule: nonzero;
+                fill: rgb(111, 70, 255);
+              "
+              id="path-3"
+              class="mask-3"
+            ></path>
+          </clipPath>
+        </defs>
+
+        <path
+          id="path1"
+          d="M 31.071 221.738 C 62.263 221.738 66.198 257.597 97.142 257.597 C 131.72 257.597 114.305 219.331 158.992 219.331 C 202.634 219.331 183.578 254.854 243.891 254.854 C 272.641 254.854 267.283 219.734 297.093 219.734 C 312.718 219.734 314.02 246.59 314.02 278.07 L 314.02 393.819 C 314.02 425.299 323.897 448.147 292.417 448.147 L 25.06 450.151 C -6.42 450.151 0.786 425.299 0.786 393.819 L 0.786 278.07 C 0.786 246.59 -0.409 221.738 31.071 221.738 Z"
+          style="fill: rgb(233, 45, 135); clip-path: url(#clip-0)"
+          class="fill-w"
+        >
+          <title>W fill</title>
+        </path>
+
+        <path
+          d="M 302.597 13.952 C 295.99 7.44 287.431 4.184 276.902 4.184 C 266.663 4.184 258.237 7.508 251.617 14.149 C 245.015 20.802 241.714 29.287 241.714 39.59 L 241.714 131.563 C 241.714 138.624 239.351 144.528 234.63 149.271 C 229.915 154.025 224.052 156.398 217.036 156.398 C 210.026 156.398 204.162 154.025 199.438 149.271 C 194.721 144.528 192.358 138.624 192.358 131.563 L 192.358 39.59 C 192.358 29.287 190.496 21.2 183.278 13.919 C 181.143 11.766 173.853 4.258 160.858 4.258 C 148.092 4.258 139.255 12.977 138.549 13.69 C 131.433 20.867 129.168 29.287 129.168 39.59 L 129.168 131.563 C 129.168 138.624 126.805 144.528 122.087 149.271 C 117.36 154.025 111.502 156.398 104.485 156.398 C 97.474 156.398 91.611 154.025 86.898 149.271 C 82.173 144.528 79.811 138.624 79.811 131.563 L 79.811 39.59 C 79.811 29.287 76.509 20.802 69.906 14.149 C 63.29 7.508 54.861 4.184 44.622 4.184 C 34.093 4.184 25.534 7.44 18.926 13.952 C 12.315 20.468 9.016 29.028 9.016 39.617 L 9.016 131.682 C 9.016 159.114 18.124 181.987 36.323 200.318 C 54.531 218.648 77.246 227.816 104.485 227.816 C 125.374 227.816 144.122 221.637 160.764 209.309 C 177.402 221.637 196.154 227.816 217.036 227.816 C 244.279 227.816 266.995 218.648 285.201 200.318 C 303.401 181.987 312.507 159.114 312.507 131.682 L 312.507 39.617 C 312.507 29.028 309.213 20.468 302.597 13.952"
+          style="
+            fill-opacity: 1;
+            fill-rule: nonzero;
+            stroke-width: 4px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dashoffset: 6px;
+            paint-order: fill;
+            fill: none;
+            stroke-dasharray: 450, 0;
+            stroke: rgb(255, 255, 255);
+          "
+          id="path-2"
+          class="outline-w"
+        >
+          <title>W outline</title>
+        </path>
+
+        <path
+          style="clip-path: url(#clip-1); fill: rgb(255, 255, 255)"
+          d="M 345.003 230.836 C 381.806 229.699 375.094 282.398 407.765 279.195 C 442.122 282.645 442.027 227.664 480.121 229.07 C 499.579 229.738 488.366 233.317 497.716 233.822 L 497.716 242.757 C 497.716 279.995 472.864 329.812 441.384 329.812 L 379.065 326.473 C 347.585 326.473 320.062 295.006 320.062 257.768 L 321.397 239.304 C 330.079 240.411 313.523 230.836 345.003 230.836 Z"
+          class="fill-3"
+        >
+          <title>3 fill</title>
+        </path>
+
+        <path
+          d="M 335.548 11.484 C 330.816 16.355 328.448 22.66 328.448 30.417 C 328.448 37.965 330.868 44.174 335.689 49.051 C 340.527 53.916 346.695 56.347 354.184 56.347 L 421.028 56.347 C 426.16 56.347 430.452 58.088 433.9 61.569 C 437.353 65.041 439.079 69.364 439.079 74.532 C 439.079 79.697 437.353 84.018 433.9 87.499 C 430.452 90.979 426.16 92.717 421.028 92.717 L 354.184 92.717 C 346.693 92.717 341.477 93.457 334.763 100.172 C 330.837 104.098 328.573 110.37 328.573 115.897 C 328.573 120.568 329.903 126.76 335.031 131.889 C 340.43 137.288 346.86 139.285 354.184 139.285 L 421.028 139.285 C 426.16 139.285 430.452 141.023 433.9 144.499 C 437.353 147.98 439.079 152.303 439.079 157.468 C 439.079 162.636 437.353 166.959 433.9 170.432 C 430.452 173.912 426.16 175.651 421.028 175.651 L 354.184 175.651 C 346.695 175.651 340.527 178.087 335.689 182.95 C 330.868 187.827 328.448 194.037 328.448 201.584 C 328.448 209.342 330.816 215.649 335.548 220.517 C 340.284 225.387 346.504 227.816 354.202 227.816 L 421.114 227.816 C 441.052 227.816 457.676 221.109 470.999 207.698 C 484.321 194.283 490.984 177.542 490.984 157.468 C 490.984 142.075 486.494 128.261 477.534 116.002 C 486.494 103.736 490.984 89.923 490.984 74.532 C 490.984 54.459 484.321 37.719 470.999 24.306 C 457.676 10.891 441.052 4.184 421.114 4.184 L 354.202 4.184 C 346.504 4.184 340.284 6.614 335.548 11.484"
+          style="
+            stroke: rgb(233, 45, 135);
+            stroke-width: 4px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            stroke-dasharray: 450, 0;
+          "
+          id="path14"
+          class="outline-3"
+        >
+          <title>3 outline</title>
+        </path>
+      </svg>
+    </div>
+    <div class="page" data-color="green" id="page1">
+      <div class="inner">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          quaerat pariatur molestiae aperiam expedita, nihil quia cum ipsum quo
+          officia libero, ipsa enim quod ex repudiandae sunt laboriosam quidem
+          repellendus!
+        </p>
+      </div>
+      <img src="https://picsum.photos/1500/1200" alt="random" />
+    </div>
+    <div class="page" data-color="orange" id="page2">
+      <div class="inner">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          quaerat pariatur molestiae aperiam expedita, nihil quia cum ipsum quo
+          officia libero, ipsa enim quod ex repudiandae sunt laboriosam quidem
+          repellendus!
+        </p>
+      </div>
+      <img src="https://picsum.photos/1500/1201" alt="random" />
+    </div>
+    <div class="page" data-color="blue" id="page3">
+      <div class="inner">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          quaerat pariatur molestiae aperiam expedita, nihil quia cum ipsum quo
+          officia libero, ipsa enim quod ex repudiandae sunt laboriosam quidem
+          repellendus!
+        </p>
+      </div>
+      <img src="https://picsum.photos/1500/1202" alt="random" />
+    </div>
+    <div class="page" data-color="pink" id="page4">
+      <div class="inner">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          quaerat pariatur molestiae aperiam expedita, nihil quia cum ipsum quo
+          officia libero, ipsa enim quod ex repudiandae sunt laboriosam quidem
+          repellendus!
+        </p>
+      </div>
+      <img src="https://picsum.photos/1500/1203" alt="random" />
+    </div>
+    <footer class="footer">
+      <a href="#" onClick="scrollToTop(); return false;" class="footer-logo"
+        ><img src="./w3-invert.svg" alt="W3 Applications"
+      /></a>
+      <div>© W3 Applications <a href="#">UK</a> | <a href="#">NZ</a></div>
+    </footer>
+
+    <script>
+      // GSAP animation
+      gsap.to(".fill-w", {
+        duration: 1,
+        attr: {
+          d: "M 32.406 139.589 C 63.598 139.589 63.526 109.329 94.47 109.329 C 129.048 109.329 111.633 135.179 156.32 135.179 C 199.962 135.179 182.627 112.721 227.194 109.257 C 256.712 106.963 270.589 150.338 293.753 131.575 C 312.717 116.214 312.684 123.701 312.684 155.181 L 312.684 270.93 C 312.684 302.41 322.561 325.258 291.081 325.258 L 23.724 327.262 C -7.756 327.262 -0.55 302.41 -0.55 270.93 L -0.55 155.181 C -5.225 88.971 0.926 139.589 32.406 139.589 Z",
+        },
+        ease: "power1.in",
+        repeat: 0,
+      });
+      gsap.to(
+        ".fill-w",
+        {
+          duration: 2,
+          attr: {
+            d: "M 31.071 -26.383 C 62.263 -26.383 58.184 -9.134 89.128 -9.134 C 123.706 -9.134 107.626 -32.932 152.313 -32.932 C 195.955 -32.932 180.624 -15.009 225.191 -19.609 C 254.709 -22.655 265.914 -28.716 289.078 -53.633 C 308.042 -74.033 315.356 -23.215 319.363 19.258 L 321.367 170.971 C 321.367 212.777 319.89 245.791 288.41 245.791 L 21.053 248.453 C -10.427 248.453 -3.221 215.449 -3.221 173.643 L -3.221 19.926 C -7.896 -68.001 -0.409 -26.383 31.071 -26.383 Z",
+          },
+          ease: "power1.out",
+          repeat: 0,
+        },
+        1
+      );
+      gsap.to(".fill-3", {
+        duration: 1,
+        attr: {
+          d: "M 347.675 129.28 C 384.478 128.319 376.43 104.915 409.101 102.207 C 450.138 102.811 433.345 123.417 471.439 124.605 C 502.919 124.605 499.052 89.348 499.052 120.828 L 498.384 213.202 C 498.384 244.682 473.532 231.465 442.052 231.465 L 375.058 231.465 C 343.578 231.465 318.726 244.682 318.726 213.202 L 316.054 125.503 C 316.054 94.023 316.195 129.28 347.675 129.28 Z",
+        },
+        ease: "power1.in",
+        repeat: 0,
+      });
+      gsap.to(
+        ".fill-3",
+        {
+          duration: 1,
+          attr: {
+            d: "M 340.328 1.048 C 377.131 0.087 357.061 5.402 408.433 3.362 C 449.47 3.966 438.688 0.528 476.782 1.716 C 508.262 1.716 499.052 26.568 499.052 58.048 L 498.384 213.202 C 498.384 244.682 473.532 231.465 442.052 231.465 L 375.058 231.465 C 343.578 231.465 318.726 244.682 318.726 213.202 L 318.058 58.048 C 318.058 26.568 308.848 1.048 340.328 1.048 Z",
+          },
+          ease: "power1.out",
+          repeat: 0,
+        },
+        1
+      );
+
+      let currentlyScrolling = false;
+
+      document.querySelectorAll(".top-links a").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          if (currentlyScrolling) return;
+          // Remove 'active' class from all links
+          document.querySelectorAll(".top-links a").forEach((otherLink) => {
+            otherLink.classList.remove("active");
+            otherLink.classList.add("inactive");
+          });
+
+          // Add 'active' class to the clicked link
+          link.classList.remove("inactive");
+          // remove width
+          link.style.width = "auto";
+          link.classList.add("active");
+          checkLinkSizes();
+
+          // Get the value of the 'data-page' attribute
+          const pageId = link.getAttribute("data-page");
+
+          // Scroll to the element with the matching ID
+          const targetElement = document.getElementById(pageId);
+          smoothScrollTo(targetElement, 1000);
+
+          // Prevent default link behavior
+          event.preventDefault();
+        });
+      });
+
+      function scrollToTop() {
+        if (currentlyScrolling) return;
+        smoothScrollTo(document.getElementById("homepage"), 1000);
+      }
+
+      function smoothScrollTo(element, duration) {
+        if (!element) return;
+        currentlyScrolling = true;
+        setTimeout(() => {
+          currentlyScrolling = false;
+        }, duration);
+        const start = window.pageYOffset || document.documentElement.scrollTop;
+        const target = element.getBoundingClientRect().top + start;
+        const startTime = performance.now();
+
+        function easeInOutQuad(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t + b;
+          t--;
+          return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+        function easeInOutCirc(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (-c / 2) * (Math.sqrt(1 - t * t) - 1) + b;
+          t -= 2;
+          return (c / 2) * (Math.sqrt(1 - t * t) + 1) + b;
+        }
+
+        function scrollStep(timestamp) {
+          const currentTime = timestamp || performance.now();
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          const easedProgress = easeInOutCirc(progress, 0, 1, 1); // Use the easing function here
+
+          window.scrollTo(0, start + (target - start) * easedProgress);
+
+          if (progress < 1) {
+            requestAnimationFrame(scrollStep);
+          } else {
+            currentlyScrolling = false; // Set scrolling flag to false when scrolling is complete
+          }
+        }
+
+        requestAnimationFrame(scrollStep);
+      }
+
+      function checkPagePadding() {
+        const firstPage = document.getElementById("page1");
+        const navBar = document.querySelector(".top-links");
+        // get height of nav bar
+        const navBarHeight = navBar.getBoundingClientRect().height;
+        const remInPixels = parseFloat(
+          getComputedStyle(document.documentElement).fontSize
+        );
+        if (firstPage && navBarHeight && remInPixels) {
+          // get all pages
+          const pages = document.querySelectorAll(".page");
+          // loop through all pages
+          pages.forEach((page) => {
+            if (page.id !== "homepage") {
+              const firstChild = page.firstElementChild;
+              if (firstChild) {
+                firstChild.style.paddingTop = `2rem`;
+                firstChild.style.borderTop = `${navBarHeight}px solid #000`;
+              }
+            }
+          });
+        }
+      }
+
+      function getLinkSize(link) {
+        const linksContainer = document.querySelector(".top-links");
+        // duplicate link off-screen
+        const clone = link.cloneNode(true);
+        clone.style.position = "absolute";
+        clone.style.left = "5px";
+        clone.style.top = "5px";
+        clone.style.width = "fit-content";
+        linksContainer.appendChild(clone);
+        // get width
+        const width = clone.getBoundingClientRect().width;
+        // remove clone
+        linksContainer.removeChild(clone);
+        return width;
+      }
+
+      function resizeLink(link, isActive = false) {
+        // get current link width
+        const linkSize = getLinkSize(link);
+        const remToPixels = parseFloat(
+          getComputedStyle(document.documentElement).fontSize
+        );
+        if (isActive) {
+          link.style.width = `${linkSize}px`;
+        } else {
+          // set it to 50% + padding
+          link.style.width = `${linkSize / 2 + remToPixels}px`;
+        }
+      }
+
+      function checkLinkSizes() {
+        document.querySelectorAll(".top-links a").forEach((link) => {
+          const isActive = !link.classList.contains("inactive");
+          resizeLink(link, isActive);
+        });
+      }
+
+      function checkVisiblePage() {
+        const logoElement = document.querySelector(".w3-logo");
+        if (window.scrollY > 200) {
+          logoElement.classList.add("scrolling");
+
+          if (currentlyScrolling) return;
+
+          // Get all 'page' elements
+          const pageElements = document.querySelectorAll(".page");
+
+          // Calculate the maximum visible area
+          let maxVisibleArea = 0;
+          let mostVisiblePageId = null;
+
+          pageElements.forEach((page) => {
+            const checkEl =
+              page.id === "homepage" ? page : page.firstElementChild;
+            const rect = checkEl.getBoundingClientRect();
+            const visibleArea =
+              Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+            const yPosition = rect.top;
+            const threshold = page === "page1" ? 0 : 0.5 * window.innerHeight;
+
+            if (visibleArea > maxVisibleArea && yPosition < threshold) {
+              maxVisibleArea = visibleArea;
+              mostVisiblePageId = page.id;
+            }
+          });
+
+          if (!mostVisiblePageId) return;
+
+          // Update the links' active state
+          document.querySelectorAll(".top-links a").forEach((link) => {
+            const dataPage = link.getAttribute("data-page");
+            if (mostVisiblePageId === "homepage") {
+              link.classList.remove("active");
+              link.classList.remove("inactive");
+            } else if (dataPage === mostVisiblePageId) {
+              link.classList.add("active");
+              link.classList.remove("inactive");
+            } else {
+              link.classList.remove("active");
+              link.classList.add("inactive");
+            }
+            checkLinkSizes();
+          });
+        }
+      }
+
+      checkPagePadding();
+      window.addEventListener("resize", checkPagePadding);
+      window.addEventListener("load", () => {
+        checkPagePadding();
+        checkLinkSizes();
+      });
+      window.addEventListener("scroll", checkVisiblePage);
+    </script>
+  </body>
+</html>

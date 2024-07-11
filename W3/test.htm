@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Path Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250">
+      <!-- Initial path with original points -->
+      <path
+        id="path1"
+        d="M 35.747 1.339 C 66.939 1.339 68.203 37.198 99.147 37.198 C 133.725 37.198 115.642 0.267 160.329 0.267 C 190.602 0.267 182.441 34.455 235.209 34.455 C 272.03 34.455 271.959 -0.665 301.769 -0.665 C 317.394 -0.665 318.696 26.191 318.696 57.671 L 318.696 173.42 C 318.696 204.9 328.573 227.748 297.093 227.748 L 29.736 229.752 C -1.744 229.752 5.462 204.9 5.462 173.42 L 5.462 57.671 C 5.462 26.191 4.267 1.339 35.747 1.339 Z"
+        style="fill: rgb(233, 45, 135)"
+        class="fill-w"
+      >
+        <title>W fill</title>
+      </path>
+    </svg>
+
+    <script>
+      // GSAP animation
+      gsap.to("#path1", {
+        duration: 2, // Animation duration in seconds
+        attr: {
+          d: "M 39.754 33.397 C 75.621 38.74 65.796 1.101 96.475 5.14 C 137.064 10.483 124.324 36.332 169.011 36.332 C 207.298 36.332 183.777 4.401 236.545 4.401 C 273.366 4.401 271.959 17.367 297.762 30.057 C 311.783 36.953 318.696 26.191 318.696 57.671 L 318.696 173.42 C 318.696 204.9 328.573 227.748 297.093 227.748 L 29.736 229.752 C -1.744 229.752 5.462 204.9 5.462 173.42 L 5.462 57.671 C 5.462 26.191 8.618 28.759 39.754 33.397 Z",
+        }, // New path with changed points
+        ease: "power1.inOut", // Easing function (optional)
+        repeat: 2, // Repeat indefinitely
+        yoyo: true, // Reverse the animation
+      });
+    </script>
+  </body>
+</html>
